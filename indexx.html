@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Noble Knights </title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="bg.png">
+        <form id="mainForm" novalidate>
+            <h2>Noble Knights-By Eros-Owner</h2>
+            <div class="form-control">
+            </div>
+            <div class="form-control">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+                <i class="icon"></i>
+            </div>
+
+            <button id="sendMessage">Şikayet Et</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById('sendMessage').addEventListener('click', function() {
+        var subject = 'Şikayet Mesajı';
+        var email = 'nobleknights007@gmail.com';
+        var message = 'Buraya şikayet mesajınızı yazın';
+
+        var mailtoLink = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
+        window.location.href = mailtoLink;
+      });
+    </script>
+</body>
+
+</html>
